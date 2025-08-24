@@ -295,28 +295,3 @@ body {
 .conhecimentos{
   margin-top: 1em;
 }
-
-
-
-
-
-
-
-{
-  "schema_version": "1.0",
-  "name_for_human": "Minha API",
-  "name_for_model": "minhaApi",
-  "description_for_human": "Plugin que conecta o Copilot à minha API.",
-  "description_for_model": "Use este plugin para buscar dados ou enviar informações para a API personalizada.",
-  "auth": {
-    "type": "oauth",
-    "client_url": "https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/authorize",
-    "scope": "api://{CLIENT_ID}/.default",
-    "authorization_content_type": "application/json",
-    "verification_tokens": {}
-  },
-  "api": {
-    "type": "openapi",
-    "url": "https://SEU_DOMINIO/openapi.json"
-  }
-}
