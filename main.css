@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  background-color: #000000;
+  color: #fff;
+  font-family:  FreeMono, monospace;
+  height: 100vh;
+}
+.content{
+  display: none;
+}
+.content.show{
+  display: flex;
+  height: 60vh;
+  flex-direction: column;
+}
+/*     HOME      */
+.home-content {
+  display: flex;
+  height: 60vh;
+  align-items: center;
+  gap: 40px; 
+  align-items: center;
+  justify-content: center;
+
+}
+.tab-buttons {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: #121212;
+  padding: 20px;
+}
+
+.btns {
+  display: flex;
+  gap: 40px;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.tab-btn.active {
+  color: #ffffff;
+}
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 4px;
+  background-color: #412741;
+  border-radius: 10px;
+}
+.redes{
+    display: flex;
+    justify-content: right;
+    text-align: right;
+}
+.redes-container {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+}
+.redes img {
+  width: 2em;
+  height: 2em;
+}
+.profile-img {
+  /* width: 50%; */
+  height: 20em;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 100px #8b718b;
+  
+ /*      SOBRE MIM      */
+}
+.personalizacao1{
+    font-size: 1.5em;
+    margin-left: 2em;
+}
+.linha-com-texto {
+    display: flex;
+    align-items: center;
+    gap: 1em; 
+}
+.linha {
+    width: 15em;
+    height: 2px;
+    background-color: #412741;
+}
+.linha2 {
+    width: 5em;
+    height: 2px;
+    background-color: #412741;
+}
+.profile-img2{
+    width: 25%;
+    border-radius: 50%;
+    float: left;
+    margin-top: 3em;
+    margin-left: 3em;
+    margin-right: 4em;
+    margin-bottom: 3em;
+}
+.text-content-sobre{
+    font-size: 1.5em;
+    margin-right: 2em;
+    text-indent: 50px;
+    margin-bottom: 2em;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#sobre-mim {
+    align-items: center;
+    margin-top: 1em;
+}
+.sobre-mim-content{
+    
+    background-color: #222222;
+    width: 80em;
+    border-radius: 20px 20px 20px 20px;  
+}
+.habilidades{
+    margin-left: 10em;
+    flex-direction: column;
+    display: flex;
+
+}
+.buttons-1-linha{
+    display: flex;
+    text-align: center;
+    flex-direction:row;
+    gap: 4em;
+}
+.buttons-2-linha{
+    margin-top: 5em;
+    display: flex;
+    text-align: center;
+    flex-direction:row;
+    gap: 4em;
+}
+.text-habilidades{
+    width: 80em;
+    margin-top: 1em;
+    font-size: 1em;
+}
+.text-button {
+    display: flex;
+    align-items: center; 
+    gap: 8px;             
+    background-color: #000000;
+    color:#ffffff;
+    border-style: solid;
+    border-color: #412741;
+    border-radius: 0.3em;
+    padding-bottom: 0.2em;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2em;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+    width: 2.5em;
+    height: 2.5em;
+    margin-top: 0.2em;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.language-text {
+  transition: transform 0.3s ease;
+}
+
+.tooltip {
+  font-size: 0.75em;
+  color: #fff;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.text-button:hover .language-text {
+    transform: translateY(-5px); 
+}
+.text-button:hover {
+  background-color: #412741;
+  color: #fff;                         
+}
+
+.text-button:hover .tooltip {
+  opacity: 1;
+  max-height: 20px;
+}
+.text-content-projeto {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1em; 
+    justify-content: center; 
+}
+
+.cards {
+  margin-top: 2em;
+    background-color: #121212;
+    border-radius: 1em;
+    text-align: left; 
+    border: solid #412741;
+    width: 22em; /* largura fixa para manter lado a lado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.text-card {
+    margin: 1em;
+}
+
+.img-projeto {
+    margin-top: 1em;
+    width: 100%;
+    height: 10em;
+    border-radius: 1em;
+    object-fit: cover;
+}
+.card-curso{
+  
+  animation: slideInUp 1s ease-out;
+  
+}
+.accordion {
+    display: flex;
+    background-color: #111;
+    color: #fff;  
+    padding: 0.5em;
+    width: 100%;
+    text-align: left;
+    font-size: 1em;
+    transition: 0.3s ease;
+    border: outset #412741;
+}
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.formatlogoudemy{
+    float: right;
+    width: 10em; 
+    height: 5em;
+}
+.formatlogobradesco{
+    float: right;
+    width: 10em; 
+    height: 5em;
+}
+.formatdatascience{
+    float: right;
+    width: 7em; 
+    height: 4em;
+    border-radius: 1em;
+}
+.conhecimentos{
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+{
+  "schema_version": "1.0",
+  "name_for_human": "Minha API",
+  "name_for_model": "minhaApi",
+  "description_for_human": "Plugin que conecta o Copilot à minha API.",
+  "description_for_model": "Use este plugin para buscar dados ou enviar informações para a API personalizada.",
+  "auth": {
+    "type": "oauth",
+    "client_url": "https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/authorize",
+    "scope": "api://{CLIENT_ID}/.default",
+    "authorization_content_type": "application/json",
+    "verification_tokens": {}
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://SEU_DOMINIO/openapi.json"
+  }
+}
